@@ -15,7 +15,7 @@ defmodule Menu.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {Menu, []},
-     applications: [:phoenix, :cowboy, :logger]]
+     applications: [:phoenix, :cowboy, :logger, :postgrex, :ecto]]
   end
 
   # Specifies your project dependencies
@@ -23,6 +23,8 @@ defmodule Menu.Mixfile do
   # Type `mix help deps` for examples and options
   defp deps do
     [{:phoenix, "~> 0.8.0"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:postgrex, "~> 0.6.0"},
+     {:ecto, "~> 0.2.5"}]
   end
 end

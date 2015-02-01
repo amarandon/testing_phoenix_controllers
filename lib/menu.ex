@@ -9,6 +9,7 @@ defmodule Menu do
     children = [
       # Start the endpoint when the application starts
       worker(Menu.Endpoint, []),
+      worker(Menu.Repo, []),
 
       # Here you could define other workers and supervisors as children
       # worker(Menu.Worker, [arg1, arg2, arg3]),
